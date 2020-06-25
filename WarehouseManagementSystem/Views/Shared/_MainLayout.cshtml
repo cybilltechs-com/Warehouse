@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warehouse Management</title>
+    <!-- viewport meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- styles -->
+    <!-- helpers -->
+    <link rel="stylesheet" href="/Content/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="/Content/plugins/font-awesome/css/font-awesome.min.css">
+    <!-- strock gap icons -->
+    <link rel="stylesheet" href="/Content/plugins/Stroke-Gap-Icons-Webfont/style.css">
+    <!-- revolution slider css -->
+    <link rel="stylesheet" href="/Content/plugins/revolution/css/settings.css">
+    <link rel="stylesheet" href="/Content/plugins/revolution/css/layers.css">
+    <link rel="stylesheet" href="/Content/plugins/revolution/css/navigation.css">
+    <!-- flaticon css -->
+    <link rel="stylesheet" href="/Content/plugins/flaticon/flaticon.css">
+    <!-- jQuery ui css -->
+    <link href="/Content/plugins/jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="/Content/plugins/owl.carousel-2/assets/owl.carousel.css">
+    <link rel="stylesheet" href="/Content/plugins/owl.carousel-2/assets/owl.theme.default.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="/Content/plugins/animate.min.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="/Content/plugins/fancyapps-fancyBox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="/Content/css/style.css">
+    <link rel="stylesheet" href="/Content/css/style.css">
+    <!-- responsive stylesheet -->
+    <link rel="stylesheet" href="/Content/css/responsive.css">
+</head>
+<body>
+    <!-- Start header -->
+    <header id="header" class="stricky">
+        <div class="thm-container clearfix">
+            <div class="logo pull-left">
+                <a href=@Url.Action("/Index")>
+                    <img src="/Content/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header-info pull-right">
+
+                <div class="info-box">
+                    <div class="icon-box no-border">
+                        <i class="icon icon-Timer"></i>
+                    </div>
+                    <div class="text-box">
+                        <p class="highlighted">Mon - Sat 9.00 - 18.00</p>
+                        <p>Sunday Closed</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="icon-box">
+                        <i class="icon icon-Phone2"></i>
+                    </div>
+                    <div class="text-box">
+                        <p class="highlighted">Call Us:</p>
+                        <p class="phone-number">(123) 456 7890</p>
+                    </div>
+                </div>
+                <div class="info-box search-box-wrapper">
+                    <div class="icon-box">
+                        <i class="flaticon-search51"></i>
+                    </div>
+                    <form action="#" class="search-box-holder">
+                        <div class="search-box">
+                            <div class="form">
+                                <input type="text" placeholder="Track Your Shipment">
+                                <button type="submit"><span>GO</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End header  -->
+    <!-- Start mainmenu -->
+    <nav class="main-menu-wrapper stricky">
+        <div class="thm-container menu-gradient ">
+            <div class="clearfix">
+                <div class="nav-holder pull-left">
+                    <div class="nav-header">
+                        <button><i class="fa fa-bars"></i></button>
+                    </div>
+                    <div class="nav-footer">
+                        <ul class="nav">
+                            <li class="has-submenu">
+                                <a href=@Url.Action("/Index")>Home</a>
+                                
+                            </li>
+                            <li class="has-submenu">
+                                <a href=@Url.Action("/About")>about us</a>
+                                 <ul class="submenu">
+                                    <li><a href=@Url.Action("/Team")>Our Team</a></li>
+                                    <li><a href=@Url.Action("/Company_history")>Company History</a></li>
+                                    <li><a href=@Url.Action("/Clients")>Our Clients</a></li>
+                                    <li><a href=@Url.Action("/Testimonials")>Testimonials</a></li>
+                                    <li><a href=@Url.Action("/Career")>Career</a></li>
+                                </ul> 
+                            </li>
+                            <li class="has-submenu">
+                                <a href=@Url.Action("/Services")>Services</a>
+                                 <ul class="submenu">
+                                    <li><a href=@Url.Action("/Single_service")>Service Details</a></li>
+                                    <li><a href=@Url.Action("/Pricing")>Our Pricing</a></li>
+                                </ul> 
+                            </li>
+                            <li class="has-submenu">
+                                <a href=@Url.Action("/Fleet_gallery_1")>Gallery</a>
+                                 <ul class="submenu">
+                                    <li><a href=@Url.Action("/Fleet_gallery_1")>fleet gallery one</a></li>
+                                    <li><a href=@Url.Action("/Fleet_gallery_2")>fleet gallery two</a></li>
+                                </ul> 
+                            </li>
+                            <!-- 	<li class="has-submenu">
+                                    <a href="#">Pages</a>
+                                    <ul class="submenu">
+                                        <li><a href="404.html">Error 404 page</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="track-shipment.html">Track Your Shipment</a></li>
+                                        <li><a href="request-qoute.html">Request a Qoute</a></li>
+                                    </ul>
+                                </li> -->
+                            <li class="has-submenu">
+                                <a href="blog-left.html">blog</a>
+                                 <ul class="submenu">
+                                    <li><a href=@Url.Action("/Blog_left")>Blog Left Bar</a></li>
+                                    @*<li><a href="blog-right.html">Blog Right Bar</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>*@
+                                </ul> 
+                            </li>
+                            <li><a href=@Url.Action("/Contact")>contact us</a></li>
+                            <li>
+                                <a href=@Url.Action("/Login")>
+                                    <i class="fa fa-user-circle-o" style="font-size:18px"></i>
+                                    Account
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="free-qoute-button pull-right">
+                    <a href=@Url.Action("/Request_quote")>Get Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End mainmenu -->
+   
+    <div>
+        @RenderBody()
+    </div>
+
+    <section class="footer-top">
+        <div class="thm-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <h3>Logistic and cargo</h3>
+                        <p>Contact us now to get quote for all your global <br>shipping and cargo need.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="thm-btn" href="contact.html">Contact Us <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="sec-padding">
+        <div class="thm-container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 footer-widget">
+                    <div class="about-widget">
+                        <a href="#"><img src="/Content/images/footer-logo.png" alt="Awesome Image" /></a>
+                        <p>Logistics business includes numerous complex internal&external operations such as order fulfilment, transport tracking and more.</p>
+                        <a href="#">Read More <i class="fa fa-angle-double-right"></i></a>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-widget">
+                    <div class="pl-30">
+                        <div class="title">
+                            <h3><span>Our Services</span></h3>
+                        </div>
+                        <ul class="link-list">
+                            <li><a href="#">Sea Freight</a></li>
+                            <li><a href="#">Road Transportation</a></li>
+                            <li><a href="#">Air Freight</a></li>
+                            <li><a href="#">Railway Logistics</a></li>
+                            <li><a href="#">Packaging & Storage</a></li>
+                            <li><a href="#">Warehousing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 footer-widget">
+                    <div class="title">
+                        <h3><span>Quick Links</span></h3>
+                    </div>
+                    <ul class="link-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6 footer-widget">
+                    <div class="title">
+                        <h3><span>Quick Links</span></h3>
+                    </div>
+                    <ul class="contact-infos">
+                        <li>
+                            <div class="icon-box">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="text-box">
+                                <p><b>Logis Cargo Ltd.</b> <br> 42B, Tailstoi Town 5248 MT, Australia</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>+ 01865 524 8503  /  1254 954 7854</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <i class="fa fa-envelope-o"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>contact@logiccargo.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <i class="icon icon-Timer"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>Monday - Friday : 8.00 - 19.00</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="bottom-bar">
+        <div class="thm-container clearfix">
+            <div class="pull-left">
+                <p>Copyright © Logic Cargo 2016. All rights reserved.</p>
+            </div>
+            <div class="pull-right">
+                <p>Created by: DesignArc</p>
+            </div>
+        </div>
+    </section>
+    <!-- jQuery js -->
+    <script src="/Content/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/Content/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jQuery ui js -->
+    <script src="/Content/plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <!-- owl carousel js -->
+    <script src="/Content/plugins/owl.carousel-2/owl.carousel.min.js"></script>
+    <!-- jQuery appear -->
+    <script src="/Content/plugins/jquery-appear/jquery.appear.js"></script>
+    <!-- jQuery countTo -->
+    <script src="/Content/plugins/jquery-countTo/jquery.countTo.js"></script>
+    <!-- jQuery validation -->
+    <script src="/Content/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+    <!-- gmap.js helper -->
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <!-- gmap.js -->
+    <script src="/Content/plugins/gmap.js"></script>
+    <!-- mixit up -->
+    <script src="/Content/plugins/jquery.mixitup.min.js"></script>
+    <!-- revolution slider js -->
+    <script src="/Content/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="/Content/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/Content/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/Content/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/Content/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/Content/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/Content/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/Content/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/Content/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="/Content/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/Content/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <!-- fancy box -->
+    <script src="/Content/plugins/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
+    <!-- type script -->
+    <script src="/Content/plugins/typed.js-master/dist/typed.min.js"></script>
+    <!-- theme custom js  -->
+    <script src="/Content/js/main.js"></script>
+</body>
+</html>

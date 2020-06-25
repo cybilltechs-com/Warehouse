@@ -1,0 +1,56 @@
+﻿
+@{
+  
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row back register">
+        <div class="col-md-7 col-sm-6 col-xs-12 pull-left">
+            <form action="http://localhost:4514/Home/login" class="contact-form contact-page" method="post" enctype="multipart/form-data">
+                <h1 class="register" style="color: white;">Login Here</h1>
+                <label class="register" style="color: white;">User ID</label>
+                <p class="r"><input type="text" id="userid" placeholder="User ID" name="name"></p>
+                <!-- <p><input type="text" placeholder="Email" name="email"></p> -->
+                <label style="color: white;">Password</label>
+                <p><input type="password" placeholder="password" name="pwd" id="pwd"></p>
+                <label style="color: white;">User type</label>
+                <select class="select-menu" name="selectMenu" id="ltype">
+                    <option value="default">Login Type...!</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Subincharge">Subincharge</option>
+                    <option value="Retailer">Retailer</option>
+                    <!-- <option value="Ware Housing">Ware Housing</option>	 -->
+                    <!-- <option value="Ware Housing">Ware Housi/ng</option>	 -->
+                </select>
+                <!-- <p><textarea name="message" placeholder="Message"></textarea></p> -->
+                <button type="submit" class="thm-btn register" onclick="f1()">Login <i class="fa fa-arrow-right"></i></button>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function f1() {
+                var data = {
+                    userid: $('[name="name"]').val(),
+
+                    password: $('[name="pwd"]').val(),
+                    logintype: $('[name="selectMenu"]').val()
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:4514/Home/login",
+                    content: "application/json",
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    success: function (data) {
+                        console.log('success');
+                    },
+
+                    error: function (data) {
+                        console.log('failed');
+                    }
+                });
+            }
+        </script>
+  
+    </div>
+</div>

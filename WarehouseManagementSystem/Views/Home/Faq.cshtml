@@ -1,0 +1,188 @@
+﻿
+@{
+   
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+
+<section class="inner-banner">
+    <div class="thm-container">
+        <h2>FAQ</h2>
+        <ul class="breadcumb">
+            <li><a href=@Url.Action("/Index")><i class="fa fa-home"></i> Home</a></li>
+            <li><span>FAQ</span></li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="sec-padding faq-page">
+    <div class="thm-container">
+        <div class="row">
+            <div class="col-md-4 pull-left">
+                <div class="single-sidebar-widget">
+                    <div class="special-links">
+                        <ul>
+                            <li><a href=@Url.Action("/Company_history")>Company History</a></li>
+                            <li><a href="@Url.Action("/Career")">Career</a></li>
+                            <li class="active"><a href=@Url.Action("/Faq")>FaQs</a></li>
+                            <li><a href=@Url.Action("/Clients")>Our Clients</a></li>
+                            <li><a href=@Url.Action("/Testimonials")>Testimonials</a></li>
+                            <li><a href=@Url.Action("/Track_shipment")>track your shipment</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-sidebar-widget">
+                    <div class="sec-title">
+                        <h2><span>Download brochure</span></h2>
+                    </div>
+                    <div class="dwnld-broucher">
+                        <img src="/Content/images/dwnld-broucher.png" alt="Awesome Image" />
+                        <a href="#">download as pdf &nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 pull-right">
+                <div class="sec-title">
+                    <h2><span>Frequently ask questions</span></h2>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam eius modi.</p>
+                </div>
+
+                <form action="#" class="faq-form">
+                    <input type="text" placeholder="Enter Search Keywords">
+                    <button type="submit" class="thm-btn">SEARCH</button>
+                </form>
+
+
+                <div class="accrodion-grp" data-grp-name="faq-accrodion">
+                    <div class="accrodion active">
+                        <div class="accrodion-title">
+                            <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur.</h4>
+                        </div>
+                        <div class="accrodion-content">
+                            <h3>Duis aute irure dolor in reprehenderit in voluptate</h3>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam.</p>
+                            <div class="img-caption">
+                                <div class="img-box">
+                                    <img src="/Content/images/accrodion/2.jpg" alt="Awesome Image" />
+                                </div>
+                                <div class="content-box">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accrodion">
+                        <div class="accrodion-title">
+                            <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur.</h4>
+                        </div>
+                        <div class="accrodion-content">
+                            <h3>Duis aute irure dolor in reprehenderit in voluptate</h3>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam.</p>
+                            <div class="img-caption">
+                                <div class="img-box">
+                                    <img src="/Content/images/accrodion/2.jpg" alt="Awesome Image" />
+                                </div>
+                                <div class="content-box">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accrodion">
+                        <div class="accrodion-title">
+                            <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur.</h4>
+                        </div>
+                        <div class="accrodion-content">
+                            <h3>Duis aute irure dolor in reprehenderit in voluptate</h3>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam.</p>
+                            <div class="img-caption">
+                                <div class="img-box">
+                                    <img src="/Content/images/accrodion/2.jpg" alt="Awesome Image" />
+                                </div>
+                                <div class="content-box">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accrodion">
+                        <div class="accrodion-title">
+                            <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur.</h4>
+                        </div>
+                        <div class="accrodion-content">
+                            <h3>Duis aute irure dolor in reprehenderit in voluptate</h3>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam.</p>
+                            <div class="img-caption">
+                                <div class="img-box">
+                                    <img src="/Content/images/accrodion/2.jpg" alt="Awesome Image" />
+                                </div>
+                                <div class="content-box">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accrodion">
+                        <div class="accrodion-title">
+                            <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur.</h4>
+                        </div>
+                        <div class="accrodion-content">
+                            <h3>Duis aute irure dolor in reprehenderit in voluptate</h3>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam.</p>
+                            <div class="img-caption">
+                                <div class="img-box">
+                                    <img src="/Content/images/accrodion/2.jpg" alt="Awesome Image" />
+                                </div>
+                                <div class="content-box">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accrodion">
+                        <div class="accrodion-title">
+                            <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur.</h4>
+                        </div>
+                        <div class="accrodion-content">
+                            <h3>Duis aute irure dolor in reprehenderit in voluptate</h3>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam.</p>
+                            <div class="img-caption">
+                                <div class="img-box">
+                                    <img src="/Content/images/accrodion/2.jpg" alt="Awesome Image" />
+                                </div>
+                                <div class="content-box">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accrodion">
+                        <div class="accrodion-title">
+                            <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur.</h4>
+                        </div>
+                        <div class="accrodion-content">
+                            <h3>Duis aute irure dolor in reprehenderit in voluptate</h3>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam.</p>
+                            <div class="img-caption">
+                                <div class="img-box">
+                                    <img src="/Content/images/accrodion/2.jpg" alt="Awesome Image" />
+                                </div>
+                                <div class="content-box">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
