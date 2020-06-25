@@ -19,6 +19,10 @@ namespace WarehouseManagementSystem.Controllers
         {
             return View();
         }
+        public ActionResult A()
+        {
+            return View();
+        }
         public ActionResult Pricing()
         {
             return View();
