@@ -19,10 +19,13 @@ namespace WarehouseManagementSystem.Controllers
         {
             return View();
         }
-        public ActionResult A()
+        [HttpPost]
+        public ActionResult Login(FormCollection form)
         {
-            return View();
+            return RedirectToAction("Admin","");
         }
+            
+     
         public ActionResult Pricing()
         {
             return View();

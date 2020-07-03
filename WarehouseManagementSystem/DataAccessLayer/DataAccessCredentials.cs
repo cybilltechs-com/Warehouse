@@ -87,7 +87,7 @@ namespace WarehouseManagementSystem.DataAccessLayer
                     }
               
             }
-
+            return objAdmin;
         }
     }
 }

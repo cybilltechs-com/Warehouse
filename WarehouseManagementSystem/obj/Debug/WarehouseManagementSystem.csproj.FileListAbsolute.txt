@@ -106,3 +106,5 @@ C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\obj\Debug\War
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\obj\Debug\WarehouseManagementSystem.csproj.CopyComplete
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\obj\Debug\WarehouseManagementSystem.dll
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\obj\Debug\WarehouseManagementSystem.pdb
+C:\Users\SRINIVAS\source\repos\Warehouse\WarehouseManagementSystem\bin\Microsoft.Owin.xml
+C:\Users\SRINIVAS\source\repos\Warehouse\WarehouseManagementSystem\bin\Microsoft.Owin.Security.xml
