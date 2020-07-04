@@ -1,10 +1,62 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
         /* Loading Spinner */
-     .spinner{margin:0;width:70px;height:18px;margin:-35px 0 0 -9px;position:absolute;top:50%;left:50%;text-align:center}.spinner > div{width:18px;height:18px;background-color:#333;border-radius:100%;display:inline-block;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both}.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}@@-webkit-keyframes bouncedelay{0%,80%,100%{-webkit-transform:scale(0.0)}40%{-webkit-transform:scale(1.0)}}@@keyframes bouncedelay{0%,80%,100%{transform:scale(0.0);-webkit-transform:scale(0.0)}40%{transform:scale(1.0);-webkit-transform:scale(1.0)}}
+        .spinner {
+            margin: 0;
+            width: 70px;
+            height: 18px;
+            margin: -35px 0 0 -9px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center
+        }
+
+            .spinner > div {
+                width: 18px;
+                height: 18px;
+                background-color: #333;
+                border-radius: 100%;
+                display: inline-block;
+                -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+                animation: bouncedelay 1.4s infinite ease-in-out;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both
+            }
+
+            .spinner .bounce1 {
+                -webkit-animation-delay: -.32s;
+                animation-delay: -.32s
+            }
+
+            .spinner .bounce2 {
+                -webkit-animation-delay: -.16s;
+                animation-delay: -.16s
+            }
+
+        @@-webkit-keyframes bouncedelay {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0.0)
+            }
+
+            40% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @@keyframes bouncedelay {
+            0%, 80%, 100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0)
+            }
+
+            40% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0)
+            }
+        }
     </style>
     <meta charset="UTF-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -12,129 +64,132 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="Contect/assets/images/icons/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Contect/assets/images/icons/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Contect/assets/images/icons/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="Contect/assets/images/icons/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="Contect/assets/images/icons/favicon.png">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/bootstrap/css/bootstrap.css">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/Content/assets/images/icons/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/Content/assets/images/icons/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/Content/assets/images/icons/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/Content/assets/images/icons/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/Content/assets/images/icons/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/bootstrap/css/bootstrap.css">
+
     <!-- icon cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- HELPERS -->
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/animate.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/backgrounds.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/boilerplate.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/border-radius.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/grid.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/page-transitions.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/spacing.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/typography.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/utils.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/colors.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/animate.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/backgrounds.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/boilerplate.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/border-radius.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/grid.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/page-transitions.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/spacing.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/typography.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/utils.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/colors.css">
     <!-- ELEMENTS -->
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/badges.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/buttons.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/content-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/dashboard-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/forms.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/images.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/info-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/invoice.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/loading-indicators.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/menus.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/panel-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/response-messages.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/responsive-tables.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/ribbon.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/social-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/tables.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/tile-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/elements/timeline.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/badges.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/buttons.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/content-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/dashboard-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/forms.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/images.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/info-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/invoice.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/loading-indicators.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/menus.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/panel-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/response-messages.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/responsive-tables.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/social-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/tables.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/tile-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/elements/timeline.css">
     <!-- ICONS -->
-    <link rel="stylesheet" type="text/css" href="Contect/assets/icons/fontawesome/fontawesome.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/icons/linecons/linecons.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/icons/spinnericon/spinnericon.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/icons/fontawesome/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/icons/linecons/linecons.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/icons/spinnericon/spinnericon.css">
     <!-- WIDGETS -->
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/accordion-ui/accordion.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/calendar/calendar.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/carousel/carousel.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/charts/justgage/justgage.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/charts/morris/morris.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/charts/piegage/piegage.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/charts/xcharts/xcharts.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/chosen/chosen.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/colorpicker/colorpicker.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/datatable/datatable.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/datepicker/datepicker.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/datepicker-ui/datepicker.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/dialog/dialog.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/dropdown/dropdown.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/dropzone/dropzone.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/file-input/fileinput.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/input-switch/inputswitch.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/input-switch/inputswitch-alt.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/ionrangeslider/ionrangeslider.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/jcrop/jcrop.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/jgrowl-notifications/jgrowl.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/loading-bar/loadingbar.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/maps/vector-maps/vectormaps.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/markdown/markdown.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/modal/modal.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/multi-select/multiselect.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/multi-upload/fileupload.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/nestable/nestable.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/noty-notifications/noty.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/popover/popover.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/pretty-photo/prettyphoto.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/progressbar/progressbar.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/range-slider/rangeslider.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/slidebars/slidebars.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/slider-ui/slider.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/summernote-wysiwyg/summernote-wysiwyg.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/tabs-ui/tabs.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/theme-switcher/themeswitcher.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/timepicker/timepicker.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/tocify/tocify.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/tooltip/tooltip.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/touchspin/touchspin.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/uniform/uniform.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/wizard/wizard.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/widgets/xeditable/xeditable.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/accordion-ui/accordion.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/calendar/calendar.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/carousel/carousel.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/charts/justgage/justgage.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/charts/morris/morris.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/charts/piegage/piegage.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/charts/xcharts/xcharts.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/chosen/chosen.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/colorpicker/colorpicker.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/datatable/datatable.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/datepicker/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/datepicker-ui/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/dropdown/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/dropzone/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/file-input/fileinput.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/input-switch/inputswitch.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/input-switch/inputswitch-alt.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/ionrangeslider/ionrangeslider.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/jcrop/jcrop.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/jgrowl-notifications/jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/loading-bar/loadingbar.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/maps/vector-maps/vectormaps.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/markdown/markdown.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/modal/modal.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/multi-select/multiselect.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/multi-upload/fileupload.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/nestable/nestable.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/noty-notifications/noty.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/popover/popover.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/pretty-photo/prettyphoto.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/progressbar/progressbar.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/range-slider/rangeslider.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/slidebars/slidebars.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/slider-ui/slider.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/summernote-wysiwyg/summernote-wysiwyg.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/tabs-ui/tabs.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/theme-switcher/themeswitcher.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/timepicker/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/tocify/tocify.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/tooltip/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/touchspin/touchspin.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/uniform/uniform.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/wizard/wizard.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/xeditable/xeditable.css">
     <!-- SNIPPETS -->
-    <link rel="stylesheet" type="text/css" href="Contect/assets/snippets/chat.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/snippets/files-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/snippets/login-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/snippets/notification-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/snippets/progress-box.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/snippets/todo.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/snippets/user-profile.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/snippets/mobile-navigation.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/snippets/chat.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/snippets/files-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/snippets/login-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/snippets/notification-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/snippets/progress-box.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/snippets/todo.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/snippets/user-profile.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/snippets/mobile-navigation.css">
     <!-- APPLICATIONS -->
-    <link rel="stylesheet" type="text/css" href="Contect/assets/applications/mailbox.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/applications/mailbox.css">
     <!-- Admin theme -->
-    <link rel="stylesheet" type="text/css" href="Contect/assets/themes/admin/layout.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/themes/admin/color-schemes/default.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/themes/admin/layout.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/themes/admin/color-schemes/default.css">
     <!-- Components theme -->
-    <link rel="stylesheet" type="text/css" href="Contect/assets/themes/components/default.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/themes/components/border-radius.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/themes/components/default.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/themes/components/border-radius.css">
     <!-- Admin responsive -->
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/responsive-elements.css">
-    <link rel="stylesheet" type="text/css" href="Contect/assets/helpers/admin-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/responsive-elements.css">
+    <link rel="stylesheet" type="text/css" href="/Content/assets/helpers/admin-responsive.css">
     <!-- JS Core -->
-    <script type="text/javascript" src="Contect/assets/js-core/jquery-core.js"></script>
-    <script type="text/javascript" src="Contect/assets/js-core/jquery-ui-core.js"></script>
-    <script type="text/javascript" src="Contect/assets/js-core/jquery-ui-widget.js"></script>
-    <script type="text/javascript" src="Contect/assets/js-core/jquery-ui-mouse.js"></script>
-    <script type="text/javascript" src="Contect/assets/js-core/jquery-ui-position.js"></script>
-    <!--<script type="text/javascript" src="Contect/assets/js-core/transition.js"></script>-->
-    <script type="text/javascript" src="Contect/assets/js-core/modernizr.js"></script>
-    <script type="text/javascript" src="Contect/assets/js-core/jquery-cookie.js"></script>
-    <script type="text/javascript">$(window).load(function(){
-            setTimeout(function() {
-                $('#loading').fadeOut( 400, "linear" );
+    <script type="text/javascript" src="/Content/assets/js-core/jquery-core.js"></script>
+    <script type="text/javascript" src="/Content/assets/js-core/jquery-ui-core.js"></script>
+    <script type="text/javascript" src="/Content/assets/js-core/jquery-ui-widget.js"></script>
+    <script type="text/javascript" src="/Content/assets/js-core/jquery-ui-mouse.js"></script>
+    <script type="text/javascript" src="/Content/assets/js-core/jquery-ui-position.js"></script>
+    <!--<script type="text/javascript" src="/Content/assets/js-core/transition.js"></script>-->
+    <script type="text/javascript" src="/Content/assets/js-core/modernizr.js"></script>
+    <script type="text/javascript" src="/Content/assets/js-core/jquery-cookie.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#loading').fadeOut(400, "linear");
             }, 300);
-        });</script>
+        });
+    </script>
 </head>
 <body>
     <div id="sb-site">
@@ -145,7 +200,7 @@
                     <ul class="chat-box">
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial1.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial1.jpg" alt="">
                                 <div class="small-badge bg-green"></div>
                             </div>
                             <b>
@@ -156,7 +211,7 @@
                         </li>
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial2.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial2.jpg" alt="">
                                 <div class="small-badge bg-green"></div>
                             </div>
                             <b>
@@ -167,7 +222,7 @@
                         </li>
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial3.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial3.jpg" alt="">
                                 <div class="small-badge bg-green"></div>
                             </div>
                             <b>
@@ -178,7 +233,7 @@
                         </li>
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial4.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial4.jpg" alt="">
                                 <div class="small-badge bg-green"></div>
                             </div>
                             <b>
@@ -189,7 +244,7 @@
                         </li>
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial5.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial5.jpg" alt="">
                                 <div class="small-badge bg-green"></div>
                             </div>
                             <b>
@@ -203,7 +258,7 @@
                     <ul class="chat-box">
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial6.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial6.jpg" alt="">
                                 <div class="small-badge bg-orange"></div>
                             </div>
                             <b>
@@ -214,7 +269,7 @@
                         </li>
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial7.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial7.jpg" alt="">
                                 <div class="small-badge bg-orange"></div>
                             </div>
                             <b>
@@ -225,7 +280,7 @@
                         </li>
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial8.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial8.jpg" alt="">
                                 <div class="small-badge bg-orange"></div>
                             </div>
                             <b>
@@ -239,7 +294,7 @@
                     <ul class="chat-box">
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial1.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial1.jpg" alt="">
                                 <div class="small-badge bg-red"></div>
                             </div>
                             <b>
@@ -250,7 +305,7 @@
                         </li>
                         <li>
                             <div class="status-badge">
-                                <img class="img-circle" width="40" src="Contect/assets/image-resources/people/testimonial2.jpg" alt="">
+                                <img class="img-circle" width="40" src="/Content/assets/image-resources/people/testimonial2.jpg" alt="">
                                 <div class="small-badge bg-red"></div>
                             </div>
                             <b>
@@ -263,6 +318,7 @@
                 </div>
             </div>
         </div>
+
         <div class="sb-slidebar bg-black sb-right sb-style-overlay">
             <div class="scrollable-content scrollable-slim-sidebar">
                 <div class="pad15A">
@@ -295,12 +351,15 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="clear"></div>
+
                     <a href="#" title="" data-toggle="collapse" data-target="#sidebar-toggle-6" class="popover-title">
                         Latest transfers
                         <span class="caret"></span>
                     </a>
                     <div id="sidebar-toggle-6" class="collapse in">
+
                         <ul class="files-box">
                             <li>
                                 <i class="files-icon glyph-icon font-red icon-file-archive-o"></i>
@@ -378,13 +437,17 @@
                                 </div>
                             </li>
                         </ul>
+
                     </div>
+
                     <div class="clear"></div>
+
                     <a href="#" title="" data-toggle="collapse" data-target="#sidebar-toggle-3" class="popover-title">
                         Tasks for today
                         <span class="caret"></span>
                     </a>
                     <div id="sidebar-toggle-3" class="collapse in">
+
                         <ul class="progress-box">
                             <li>
                                 <div class="progress-title">
@@ -428,8 +491,11 @@
                                 </div>
                             </li>
                         </ul>
+
                     </div>
+
                     <div class="clear"></div>
+
                     <a href="#" title="" data-toggle="collapse" data-target="#sidebar-toggle-4" class="popover-title">
                         Pending notifications
                         <span class="bs-label bg-orange tooltip-button" title="Label example">New</span>
@@ -482,6 +548,7 @@
                 <div class="bounce3"></div>
             </div>
         </div>
+
         <div id="page-wrapper">
             <div id="page-header" class="bg-gradient-9">
                 <div id="mobile-navigation">
@@ -489,11 +556,11 @@
                     <a href="index.html" class="logo-content-small" title="MonarchUI"></a>
                 </div>
                 <div id="header-logo" class="logo-bg">
-                    <a href="index.html" class="logo-content-big" title="MonarchUI">
+                    <a href=@Url.Action("/Index") class="logo-content-big" title="WareHouse">
                         Monarch <i>UI</i>
                         <span>The perfect solution for user interfaces</span>
                     </a>
-                    <a href="index.html" class="logo-content-small" title="MonarchUI">
+                    <a href=@Url.Action("/Index") class="logo-content-small" title="Admin">
                         Monarch <i>UI</i>
                         <span>The perfect solution for user interfaces</span>
                     </a>
@@ -504,8 +571,8 @@
                 <div id="header-nav-left">
                     <div class="user-account-btn dropdown">
                         <a href="#" title="My Account" class="user-profile clearfix" data-toggle="dropdown">
-                            <img width="28" src="Contect/assets/image-resources/gravatar.jpg" alt="Profile image">
-                            <span>Cybilltechs</span>
+                            <img width="28" src="/Content/assets/image-resources/gravatar.jpg" alt="Profile image">
+                            <span>WarehouseManagement</span>
                             <i class="glyph-icon icon-angle-down"></i>
                         </a>
                         <div class="dropdown-menu float-left">
@@ -513,7 +580,7 @@
                                 <div class="login-box clearfix">
                                     <div class="user-img">
                                         <a href="#" title="" class="change-img">Change photo</a>
-                                        <img src="Contect/assets/image-resources/gravatar.jpg" alt="">
+                                        <img src="/Content/assets/image-resources/gravatar.jpg" alt="">
                                     </div>
                                     <div class="user-info">
                                         <span>
@@ -558,6 +625,7 @@
                         </div>
                     </div>
                 </div><!-- #header-nav-left -->
+
                 <div id="header-nav-right">
                     <a href="#" class="hdr-btn popover-button" title="Search" data-placement="bottom" data-id="#popover-search">
                         <i class="glyph-icon icon-search"></i>
@@ -584,6 +652,7 @@
                             <i class="glyph-icon icon-linecons-megaphone"></i>
                         </a>
                         <div class="dropdown-menu box-md float-right">
+
                             <div class="popover-title display-block clearfix pad10A">
                                 Notifications
                                 <a class="text-transform-cap font-primary font-normal btn-link float-right" href="#" title="View more options">
@@ -884,15 +953,18 @@
                     <a class="header-btn" id="logout-btn" href="lockscreen-3.html" title="Lockscreen page example">
                         <i class="glyph-icon icon-linecons-lock"></i>
                     </a>
+
                 </div><!-- #header-nav-right -->
+
             </div>
             <div id="page-sidebar">
                 <div class="scroll-sidebar">
 
+
                     <ul id="sidebar-menu">
                         <!-- <li class="header"><span>Overview</span></li> -->
                         <li>
-                            <a href="view-profile.html" title="Admin Dashboard">
+                            <a href=@Url.Action("/View_Profile") title="Admin Dashboard">
                                 <i class="glyph-icon icon-user"></i>
                                 <span>Profile</span>
                             </a>
@@ -915,15 +987,16 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <li><a href="all-suppliers.html" title="Buttons"><span>All Supplier</span></a></li>
-                                    <li><a href="add-supplier.html" title="Buttons"><span>Add Supplier</span></a></li>
+                                    <li><a href=@Url.Action("/All_Suppliers") title="Buttons"><span>All Supplier</span></a></li>
+                                    <li><a href=@Url.Action("/Add_Supplier") title="Buttons"><span>Add Supplier</span></a></li>
                                     <!-- <li><a href="labels-badges.html" title="Labels &amp; Badges"><span>Labels &amp; Badges</span></a></li> -->
-                                    <!--  <li><a href="content-boxes.html" title="Content boxes"><span>Content boxes</span></a></li>
+                                    <!--  <li><a href="content-boxes.html" title="/Content boxes"><span>/Content boxes</span></a></li>
                                      <li><a href="icons.html" title="Icons"><span>Icons</span></a></li>
                                      <li><a href="nav-menus.html" title="Navigation menus"><span>Navigation menus</span></a></li>
                                      <li><a href="response-messages.html" title="Response messages"><span>Response messages</span></a></li>
                                      <li><a href="images.html" title="Images"><span>Images</span></a></li> -->
                                 </ul>
+
                             </div><!-- .sidebar-submenu -->
                         </li>
                         <li>
@@ -934,12 +1007,13 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <li><a href="all-subincharge.html" title="Chart boxes"><span>All Sublocation Incharge</span></a></li>
-                                    <li><a href="add-subincharge.html" title="Chart boxes"><span>Add Sublocation Incharge</span></a></li>
+                                    <li><a href=@Url.Action("/All_Subincharge") title="Chart boxes"><span>All Sublocation Incharge</span></a></li>
+                                    <li><a href=@Url.Action("/Add_Subincharge") title="Chart boxes"><span>Add Sublocation Incharge</span></a></li>
                                     <!--  <li><a href="tile-boxes.html" title="Tile boxes"><span>Tile boxes</span></a></li>
                                      <li><a href="social-boxes.html" title="Social boxes"><span>Social boxes</span></a></li>
                                      <li><a href="panel-boxes.html" title="Panel boxes"><span>Panel boxes</span></a></li> -->
                                 </ul>
+
                             </div><!-- .sidebar-submenu -->
                         </li>
                         <li>
@@ -949,8 +1023,8 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <li><a href="all-item.html" title="Responsive tabs"><span>All Item</span></a></li>
-                                    <li><a href="add-item.html" title="Responsive tabs"><span>Add Item</span></a></li>
+                                    <li><a href=@Url.Action("/All_Items") title="Responsive tabs"><span>All Item</span></a></li>
+                                    <li><a href=@Url.Action("/Add_Item") title="Responsive tabs"><span>Add Item</span></a></li>
                                     <!--      <li><a href="collapsable.html" title="Collapsables"><span>Collapsable accordions</span></a></li>
                                          <li><a href="bs-carousel.html" title="Bootstrap Carousel"><span>Bootstrap carousel</span></a></li>
                                          <li><a href="calendar.html" title="Calendar"><span>Calendar</span></a></li>
@@ -972,8 +1046,8 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <li><a href="all-purchase-orders.html" title="Form elements"><span>All Purchase Order</span></a></li>
-                                    <li><a href="add-purchase-order.html" title="Form elements"><span>Add Purchase Order</span></a></li>
+                                    <li><a href="#" title="Form elements"><span>All Purchase Order</span></a></li>
+                                    <li><a href=@Url.Action("/Add_Purchase_Order") title="Form elements"><span>Add Purchase Order</span></a></li>
                                     <!--    <li><a href="forms-validation.html" title="Form validation"><span>Form validation</span></a></li>
                                        <li><a href="pickers.html" title="Pickers"><span>Pickers</span></a></li>
                                        <li><a href="sliders.html" title="Sliders"><span>Sliders</span></a></li>
@@ -988,6 +1062,7 @@
                                        <li><a href="markdown.html" title="Markdown editor"><span>Markdown editor</span></a></li>
                                        <li><a href="inline-editor.html" title="Inline editor"><span>Inline editor</span></a></li> -->
                                 </ul>
+
                             </div><!-- .sidebar-submenu -->
                         </li>
                         <li>
@@ -996,9 +1071,10 @@
                                 <span>Stock</span>
                             </a>
                             <div class="sidebar-submenu">
+
                                 <ul>
-                                    <li><a href="all-stock.html" title="Basic tables"><span>All Stock</span></a></li>
-                                    <li><a href="add-stock.html" title="Basic tables"><span>Add Stock</span></a></li>
+                                    <li><a href=@Url.Action("/All_Stock") title="Basic tables"><span>All Stock</span></a></li>
+                                    <li><a href=@Url.Action("/Add_Stock") title="Basic tables"><span>Add Stock</span></a></li>
                                     <!--  <li><a href="responsive-tables.html" title="Responsive tables"><span>Responsive tables</span></a></li>
                                      <li><a href="data-tables.html" title="Data tables"><span>Data tables</span></a></li>
                                      <li><a href="advanced-datatables.html" title="Advanced data tables"><span>Advanced data tables</span></a></li>
@@ -1014,8 +1090,8 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <li><a href="all-sales-order.html" title="Flot charts"><span>All Sales Order</span></a></li>
-                                    <li><a href="add-sales-order.html" title="Flot charts"><span>Add Sales Order</span></a></li>
+                                    <li><a href=@Url.Action("/All_SalesOrders") title="Flot charts"><span>All Sales Order</span></a></li>
+                                    <li><a href=@Url.Action("/Add_Sales_Order") title="Flot charts"><span>Add Sales Order</span></a></li>
                                     <!--      <li><a href="sparklines.html" title="Sparklines"><span>Sparklines</span></a></li>
                                          <li><a href="pie-gages.html" title="PieGages"><span>PieGages</span></a></li>
                                          <li><a href="just-gage.html" title="justGage"><span>justGage</span></a></li>
@@ -1023,6 +1099,7 @@
                                          <li><a href="xcharts.html" title="xCharts"><span>xCharts</span></a></li>
                                          <li><a href="chart-js.html" title="Chart.js"><span>Chart.js</span></a></li> -->
                                 </ul>
+
                             </div><!-- .sidebar-submenu -->
                         </li>
                         <li>
@@ -1032,13 +1109,13 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <li><a href="all-reports-suppliers.html" title="gMaps"><span>All Reports Suppliers</span></a></li>
-                                    <li><a href="all-reports-subincharge.html" title="Vector maps"><span>All Reports Subincharges</span></a></li>
-                                    <li><a href="all-reports-retailer.html" title="Mapael"><span>All Reports Retailers</span></a></li>
-                                    <li><a href="all-reports-item.html" title="Mapael"><span>All Reports Items</span></a></li>
-                                    <li><a href="all-reports-stock.html" title="Mapael"><span>All Reports Stock</span></a></li>
-                                    <li><a href="all-reports-purchase.html" title="Mapael"><span>All Reports Purchase Order</span></a></li>
-                                    <li><a href="all-reports-sales-order.html" title="Mapael"><span>All Reports Sales Order</span></a></li>
+                                    <li><a href=@Url.Action("/All_Reports_Supplier") title="gMaps"><span>All Reports Suppliers</span></a></li>
+                                    <li><a href=@Url.Action("/All_Reports_SubIncharge") title="Vector maps"><span>All Reports Subincharges</span></a></li>
+                                    <li><a href=@Url.Action("/All_Retailers") title="Mapael"><span>All Reports Retailers</span></a></li>
+                                    <li><a href=@Url.Action("/All_Reports_Item") title="Mapael"><span>All Reports Items</span></a></li>
+                                    <li><a href=@Url.Action("/All_Reports_Stock") title="Mapael"><span>All Reports Stock</span></a></li>
+                                    <li><a href=@Url.Action("/All_Reports_Purchase") title="Mapael"><span>All Reports Purchase Order</span></a></li>
+                                    <li><a href=@Url.Action("/All_Reports_SalesOrder") title="Mapael"><span>All Reports Sales Order</span></a></li>
                                 </ul>
                             </div> <!-- .sidebar-submenu -->
                             <!-- </li>
@@ -1146,48 +1223,48 @@
             <!-- side header end -->
             <div id="page-content-wrapper">
                 <div id="page-content">
-                  @RenderBody()
+                   @RenderBody()
                 </div>
             </div>
         </div>
         <!-- WIDGETS -->
-        <script type="text/javascript" src="Contect/assets/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/Content/assets/bootstrap/js/bootstrap.js"></script>
         <!-- Bootstrap Dropdown -->
-        <!-- <script type="text/javascript" src="Contect/assets/widgets/dropdown/dropdown.js"></script> -->
+        <!-- <script type="text/javascript" src="/Content/assets/widgets/dropdown/dropdown.js"></script> -->
         <!-- Bootstrap Tooltip -->
-        <!-- <script type="text/javascript" src="Contect/assets/widgets/tooltip/tooltip.js"></script> -->
+        <!-- <script type="text/javascript" src="/Content/assets/widgets/tooltip/tooltip.js"></script> -->
         <!-- Bootstrap Popover -->
-        <!-- <script type="text/javascript" src="Contect/assets/widgets/popover/popover.js"></script> -->
+        <!-- <script type="text/javascript" src="/Content/assets/widgets/popover/popover.js"></script> -->
         <!-- Bootstrap Progress Bar -->
-        <script type="text/javascript" src="Contect/assets/widgets/progressbar/progressbar.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/progressbar/progressbar.js"></script>
         <!-- Bootstrap Buttons -->
-        <!-- <script type="text/javascript" src="Contect/assets/widgets/button/button.js"></script> -->
+        <!-- <script type="text/javascript" src="/Content/assets/widgets/button/button.js"></script> -->
         <!-- Bootstrap Collapse -->
-        <!-- <script type="text/javascript" src="Contect/assets/widgets/collapse/collapse.js"></script> -->
+        <!-- <script type="text/javascript" src="/Content/assets/widgets/collapse/collapse.js"></script> -->
         <!-- Superclick -->
-        <script type="text/javascript" src="Contect/assets/widgets/superclick/superclick.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/superclick/superclick.js"></script>
         <!-- Input switch alternate -->
-        <script type="text/javascript" src="Contect/assets/widgets/input-switch/inputswitch-alt.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/input-switch/inputswitch-alt.js"></script>
         <!-- Slim scroll -->
-        <script type="text/javascript" src="Contect/assets/widgets/slimscroll/slimscroll.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/slimscroll/slimscroll.js"></script>
         <!-- Slidebars -->
-        <script type="text/javascript" src="Contect/assets/widgets/slidebars/slidebars.js"></script>
-        <script type="text/javascript" src="Contect/assets/widgets/slidebars/slidebars-demo.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/slidebars/slidebars.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/slidebars/slidebars-demo.js"></script>
         <!-- PieGage -->
-        <script type="text/javascript" src="Contect/assets/widgets/charts/piegage/piegage.js"></script>
-        <script type="text/javascript" src="Contect/assets/widgets/charts/piegage/piegage-demo.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/charts/piegage/piegage.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/charts/piegage/piegage-demo.js"></script>
         <!-- Screenfull -->
-        <script type="text/javascript" src="Contect/assets/widgets/screenfull/screenfull.js"></script>
-        <!-- Content box -->
-        <script type="text/javascript" src="Contect/assets/widgets/content-box/contentbox.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/screenfull/screenfull.js"></script>
+        <!-- /Content box -->
+        <script type="text/javascript" src="/Content/assets/widgets/content-box/contentbox.js"></script>
         <!-- Overlay -->
-        <script type="text/javascript" src="Contect/assets/widgets/overlay/overlay.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/overlay/overlay.js"></script>
         <!-- Widgets init for demo -->
-        <script type="text/javascript" src="Contect/assets/js-init/widgets-init.js"></script>
+        <script type="text/javascript" src="/Content/assets/js-init/widgets-init.js"></script>
         <!-- Theme layout -->
-        <script type="text/javascript" src="Contect/assets/themes/admin/layout.js"></script>
+        <script type="text/javascript" src="/Content/assets/themes/admin/layout.js"></script>
         <!-- Theme switcher -->
-        <script type="text/javascript" src="Contect/assets/widgets/theme-switcher/themeswitcher.js"></script>
+        <script type="text/javascript" src="/Content/assets/widgets/theme-switcher/themeswitcher.js"></script>
     </div>
 </body>
 </html>

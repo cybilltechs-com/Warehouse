@@ -22,7 +22,7 @@ namespace WarehouseManagementSystem.Controllers
         [HttpPost]
         public ActionResult Login(FormCollection form)
         {
-            return RedirectToAction("Admin","");
+            return RedirectToAction("Admin","Index");
         }
             
      

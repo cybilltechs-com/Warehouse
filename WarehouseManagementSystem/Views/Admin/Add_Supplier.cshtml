@@ -1,0 +1,186 @@
+﻿
+@{
+    ViewBag.Title = "Add_Supplier";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <!--Start Supplier  form -->
+    <div class="panel">
+        <div class="panel-body">
+            <h3 class="title-hero">
+                Form validation
+            </h3>
+            <div class="example-box-wrapper">
+                <form class="form-horizontal bordered-row" id="demo-form" data-parsley-validate="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Supplier name</label>
+                                <div class="col-sm-6">
+                                    <input type="text" placeholder="Enter Suplier Name" required class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Suplier Id</label>
+                                <div class="col-sm-6">
+                                    <input type="text" data-parsley-minlength="6" placeholder=" Enter Suplier Id" required class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-6">
+                                    <input type="password" data-parsley-maxlength="6" placeholder="Enter Your Password" required class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-6">
+                                    <input type="text" data-parsley-type="email" placeholder="Email address" required class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Phone Number</label>
+                                <div class="col-sm-6">
+                                    <input type="text" data-parsley-type="digits" placeholder="Enter phone Number" required class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Date Of Birth</label>
+                                <div class="col-sm-6">
+                                    <input type="date" data-parsley-type="digits" placeholder="enter Date Of Birth" required class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">address Line1</label>
+                                <div class="col-sm-6">
+                                    <input type="text" data-parsley-type="alphan" placeholder="Enetr address Line1" required class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">District:</label>
+                                <div class="col-sm-6">
+                                    <!-- <input type="text" class="form-control" id="" placeholder="District..."> -->
+
+                                    <select name="Districts" class="form-control">
+                                        <option value="choose">Choose your District...!</option>
+                                        <option value="Adilabad">Adilabad</option>
+                                        <option value="Bhadradri Kothagudem">Bhadradri Kothagudem</option>
+                                        <option value="Jangaon">Jangaon</option>
+                                        <option value="	Jayashankar Bhupalpally">Jayashankar Bhupalpally</option>
+                                        <option value="Jogulamba Gadwal">Jogulamba Gadwal</option>
+                                        <option value="Karimnagar">Karimnagar</option>
+                                        <option value="Mahabubabad">Mahabubabad</option>
+                                        <option value="Mancherial">Mancherial</option>
+                                        <option value="Medak">Medak</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">State:</label>
+                                <div class="col-sm-6">
+                                    <!-- <input type="text" class="form-control" id="" placeholder="State..."> -->
+                                    <select name="states" class="form-control">
+                                        <option value="choose">Choose your State...!</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="bihar">bihar</option>
+                                        <option value="haryana">haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Country:</label>
+                                <div class="col-sm-6">
+                                    <!-- <input type="text" class="form-control" id="" placeholder="Country..."> -->
+                                    <select name="Countries" class="form-control">
+                                        <option value="choose">Choose your country...!</option>
+                                        <option value="	India">India</option>
+                                        <option value="	China">China</option>
+                                        <option value="Russia">Russia</option>
+                                        <option value="	Bangladesh">Bangladesh</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="	Thailand">Thailand</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="France">France</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">zip Code</label>
+                                <div class="col-sm-6">
+                                    <input type="text" data-parsley-equalto="number" required class="form-control" placeholder="000-000">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Pan Card No</label>
+                                <div class="col-sm-6">
+                                    <input type="text" data-parsley-equalto="number" placeholder="Enter Pan Card Number" required class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Profile Image</label>
+                                <div class="col-sm-6">
+                                    <input type="file" data-parsley-equalto="image" placeholder="upload Image" required class="input-group">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-default content-box text-center pad20A mrg25T">
+                        <button class="btn btn-lg btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- WIDGETS -->
+    <script type="text/javascript" src="/Content/assets/bootstrap/js/bootstrap.js"></script>
+    <!-- Bootstrap Dropdown -->
+    <!-- <script type="text/javascript" src="/Content/assets/widgets/dropdown/dropdown.js"></script> -->
+    <!-- Bootstrap Tooltip -->
+    <!-- <script type="text/javascript" src="/Content/assets/widgets/tooltip/tooltip.js"></script> -->
+    <!-- Bootstrap Popover -->
+    <!-- <script type="text/javascript" src="/Content/assets/widgets/popover/popover.js"></script> -->
+    <!-- Bootstrap Progress Bar -->
+    <script type="text/javascript" src="/Content/assets/widgets/progressbar/progressbar.js"></script>
+    <!-- Bootstrap Buttons -->
+    <!-- <script type="text/javascript" src="/Content/assets/widgets/button/button.js"></script> -->
+    <!-- Bootstrap Collapse -->
+    <!-- <script type="text/javascript" src="/Content/assets/widgets/collapse/collapse.js"></script> -->
+    <!-- Superclick -->
+    <script type="text/javascript" src="/Content/assets/widgets/superclick/superclick.js"></script>
+    <!-- Input switch alternate -->
+    <script type="text/javascript" src="/Content/assets/widgets/input-switch/inputswitch-alt.js"></script>
+    <!-- Slim scroll -->
+    <script type="text/javascript" src="/Content/assets/widgets/slimscroll/slimscroll.js"></script>
+    <!-- Slidebars -->
+    @*<script type="text/javascript" src="/Content/assets/widgets/slidebars/slidebars.js"></script>
+    <script type="text/javascript" src="/Content/assets/widgets/slidebars/slidebars-demo.js"></script>*@
+    <!-- PieGage -->
+    <script type="text/javascript" src="/Content/assets/widgets/charts/piegage/piegage.js"></script>
+    <script type="text/javascript" src="/Content/assets/widgets/charts/piegage/piegage-demo.js"></script>
+    <!-- Screenfull -->
+    <script type="text/javascript" src="/Content/assets/widgets/screenfull/screenfull.js"></script>
+    <!-- Content box -->
+    <script type="text/javascript" src="/Content/assets/widgets/content-box/contentbox.js"></script>
+    <!-- Overlay -->
+    <script type="text/javascript" src="/Content/assets/widgets/overlay/overlay.js"></script>
+    <!-- Widgets init for demo -->
+    <script type="text/javascript" src="/Content/assets/js-init/widgets-init.js"></script>
+    <!-- Theme layout -->
+    <script type="text/javascript" src="/Content/assets/themes/admin/layout.js"></script>
+    <!-- Theme switcher -->
+    <script type="text/javascript" src="/Content/assets/widgets/theme-switcher/themeswitcher.js"></script>
+</div>
+
