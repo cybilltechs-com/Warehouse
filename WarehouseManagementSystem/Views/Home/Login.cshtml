@@ -1,13 +1,12 @@
 ﻿
 @{
-  
+    ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-
 <div class="container">
     <div class="row back register">
         <div class="col-md-7 col-sm-6 col-xs-12 pull-left">
-            <form action="http://localhost:4514/Home/login" class="contact-form contact-page" method="post" enctype="multipart/form-data">
+            <form action="http://localhost:4514/Home/Login" id="formLogin" class="contact-form contact-page" method="post" enctype="multipart/form-data">
                 <h1 class="register" style="color: white;">Login Here</h1>
                 <label class="register" style="color: white;">User ID/Email ID</label>
                 <p class="r"><input type="text" id="userid" placeholder="User ID/Email ID" name="name"></p>
@@ -24,32 +23,50 @@
                     <!-- <option value="Ware Housing">Ware Housi/ng</option>	 -->
                 </select>
                 <!-- <p><textarea name="message" placeholder="Message"></textarea></p> -->
-                <button type="submit" class="thm-btn register" onclick="f1()">Login <i class="fa fa-arrow-right"></i></button>
+                <button type="submit" class="thm-btn register" id="btnSubmit">Login <i class="fa fa-arrow-right"></i></button>
             </form>
         </div>
-        <script type="text/javascript">
-            function f1() {
-                var data = {
-                    userid: $('[name="name"]').val(),
-                    password: $('[name="pwd"]').val(),
-                    logintype: $('[name="selectMenu"]').val()
-                };
-                $.ajax({
-                    type: "POST",
-                    url: "http://localhost:4514/Home/Login",
-                    content: "application/json",
-                    dataType: "json",
-                    data: JSON.stringify(data),
-                    success: function (data) {
-                        console.log('success');
-                    },
+        @*<script type="text/javascript">*@
+        //function f1() {
+        //    var data = {
+        //        userid: $('[name="name"]').val(),
+        //        password: $('[name="pwd"]').val(),
+        //        logintype: $('[name="selectMenu"]').val()
+        //    };
+        //    $.ajax({
+        //        type: "POST",
+        //        url: "http://localhost:4514/Home/Login",
+        //        content: "application/json",
+        //        dataType: "json",
+        //        data: JSON.stringify(data),
+        //        success: function (data) {
+        //            console.log('success');
+        //        },
+        //        error: function (data) {
+        //            console.log('failed');
+        //        }
+        //    });
+        //}
 
-                    error: function (data) {
-                        console.log('failed');
-                    }
+        @*</script>*@
+        <script>
+            $(document).ready(function () {
+                $("#btnSubmit").click(function (e) {
+                    //Serialize the form datas.
+                    var valdata = $("#formLogin").serialize();
+                    //to get alert popup
+                    alert(valdata);
+                    $.ajax({
+                        url: "/Home/Login",
+                        type: "POST",
+                        dataType: 'json',
+                        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                        data: valdata
+                    });
                 });
-            }
+            });
         </script>
-  
+
     </div>
 </div>
+

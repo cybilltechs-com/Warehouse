@@ -101,10 +101,7 @@ C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\bin\roslyn\vb
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\bin\roslyn\vbc.rsp
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\bin\roslyn\VBCSCompiler.exe
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\obj\Debug\WarehouseManagementSystem.csprojAssemblyReference.cache
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\obj\Debug\WarehouseManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\obj\Debug\WarehouseManagementSystem.csproj.CopyComplete
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\obj\Debug\WarehouseManagementSystem.dll
 C:\Users\SRINIVAS\Source\Repos\Warehouse\WarehouseManagementSystem\obj\Debug\WarehouseManagementSystem.pdb
-C:\Users\SRINIVAS\source\repos\Warehouse\WarehouseManagementSystem\bin\Microsoft.Owin.xml
-C:\Users\SRINIVAS\source\repos\Warehouse\WarehouseManagementSystem\bin\Microsoft.Owin.Security.xml

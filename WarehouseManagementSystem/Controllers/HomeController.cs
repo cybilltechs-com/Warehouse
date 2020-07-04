@@ -10,8 +10,7 @@ namespace WarehouseManagementSystem.Controllers
 
     public class HomeController : Controller
     {
-       
-      public ActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
@@ -19,13 +18,18 @@ namespace WarehouseManagementSystem.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Login(FormCollection form)
         {
-            return RedirectToAction("Admin","Index");
+            string name = form["name"];
+            if ( name!= null)
+            {
+                return RedirectToRoute("Admin");
+            }
+            return View();
         }
-            
-     
+
         public ActionResult Pricing()
         {
             return View();

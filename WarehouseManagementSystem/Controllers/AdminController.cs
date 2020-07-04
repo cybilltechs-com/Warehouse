@@ -9,10 +9,11 @@ namespace WarehouseManagementSystem.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
+        public ActionResult Main()
         {
             return View();
         }
+     
         public ActionResult View_Profile()
         {
             return View();
@@ -109,7 +110,7 @@ namespace WarehouseManagementSystem.Controllers
         {
             return View();
         }
-        public ActionResult forms_Validation()
+        public ActionResult Forms_Validation()
         {
             return View();
         }

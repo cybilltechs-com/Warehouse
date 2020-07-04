@@ -608,7 +608,6 @@
     <Content Include="Content\css\style.css" />
     <Content Include="Views\Admin\data-tables.html" />
     <Content Include="Views\Admin\forms-validation.html" />
-    <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Home\favicon.ico" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -838,6 +837,7 @@
     <Content Include="Content\assets\icons\typicons\typiconsfb26.eot" />
     <Content Include="Content\assets\icons\typicons\typiconsfb26.ttf" />
     <Content Include="Content\assets\icons\typicons\typiconsfb26.woff" />
+    <Content Include="obj\Release\WarehouseManagementSystem.csproj.CoreCompileInputs.cache" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -864,7 +864,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Pricing.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Blog_left.cshtml" />
@@ -903,6 +902,8 @@
     <Content Include="Views\Admin\All_Suppliers.cshtml" />
     <Content Include="Views\Admin\All_Reports_Stock.cshtml" />
     <Content Include="Views\Admin\All_Reports_SubIncharge.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Admin\Main.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
