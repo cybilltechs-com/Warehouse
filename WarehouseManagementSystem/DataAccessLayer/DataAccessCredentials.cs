@@ -22,8 +22,6 @@ namespace WarehouseManagementSystem.DataAccessLayer
             SqlCommand cmd;
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Warehouse"].ConnectionString))
             {
-                
-
                     if (logintype == "Admin")
                     {
                     try

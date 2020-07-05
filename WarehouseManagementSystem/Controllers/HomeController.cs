@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WarehouseManagementSystem.DataAccessLayer;
+using WarehouseManagementSystem.Models;
 
 
 namespace WarehouseManagementSystem.Controllers
@@ -22,12 +24,23 @@ namespace WarehouseManagementSystem.Controllers
         [HttpPost]
         public ActionResult Login(FormCollection form)
         {
-            string name = form["name"];
-            if ( name!= null)
+            
+
+            if(ModelState.IsValid)
             {
-                return RedirectToRoute("Admin");
+                string name = form["name"];
+                string password = form["pwd"];
+                string logintype = form["ltype"];
+                List<Admin> user = new List<Admin>();
+                DataAccessCredentials dac = new DataAccessCredentials();
+                user = dac.LoginCheck(name, name, password, logintype);
+                if(user!=null)
+                {
+                    return this.RedirectToAction("Main","Admin");
+                }
             }
             return View();
+
         }
 
         public ActionResult Pricing()
