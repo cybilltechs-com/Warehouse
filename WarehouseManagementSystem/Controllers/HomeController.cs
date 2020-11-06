@@ -24,9 +24,9 @@ namespace WarehouseManagementSystem.Controllers
         [HttpPost]
         public ActionResult Login(FormCollection form)
         {
-            
 
-            if(ModelState.IsValid)
+
+            if (ModelState.IsValid)
             {
                 string name = form["name"];
                 string password = form["pwd"];
@@ -34,9 +34,9 @@ namespace WarehouseManagementSystem.Controllers
                 List<Admin> user = new List<Admin>();
                 DataAccessCredentials dac = new DataAccessCredentials();
                 user = dac.LoginCheck(name, name, password, logintype);
-                if(user!=null)
+                if (user != null)
                 {
-                    return this.RedirectToAction("Main","Admin");
+                    return this.RedirectToAction("Main", "Admin");
                 }
             }
             return View();

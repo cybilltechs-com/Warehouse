@@ -357,6 +357,7 @@ li {
   font-weight: 600;
   font-size: 15px;
 }
+
 #top-bar .phone p span {
   font-size: 18px;
 }
@@ -364,6 +365,11 @@ li {
   display: inline-block;
   color: #C0C0C0;
   padding-left: 35px;
+}
+.error_form{
+    font-size:15px;
+    font-family:Arial;
+    color:red;
 }
 #top-bar .top-contact-info li i {
   color: #4378B1;

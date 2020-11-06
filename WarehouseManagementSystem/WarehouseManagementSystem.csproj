@@ -606,6 +606,7 @@
     <Content Include="Content\css\gradient.css" />
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\js\countrystate.js" />
     <Content Include="Views\Admin\data-tables.html" />
     <Content Include="Views\Admin\forms-validation.html" />
     <Content Include="Views\Home\favicon.ico" />

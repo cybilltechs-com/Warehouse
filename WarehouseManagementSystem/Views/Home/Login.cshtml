@@ -6,67 +6,78 @@
 <div class="container">
     <div class="row back register">
         <div class="col-md-7 col-sm-6 col-xs-12 pull-left">
-            <form action="http://localhost:4514/Home/Login" id="formLogin" class="contact-form contact-page" method="post" enctype="multipart/form-data">
+            <form id="formLogin" class="contact-form contact-page" method="post" enctype="multipart/form-data">
                 <h1 class="register" style="color: white;">Login Here</h1>
-                <label class="register" style="color: white;">User ID/Email ID</label>
-                <p class="r"><input type="text" id="userid" placeholder="User ID/Email ID" name="name"></p>
+                <label class="register" style="color: white;">User ID</label>
+
+                <p class="r">
+                    <input type="text" id="userid" placeholder="User ID" name="uid">
+
+
+                </p>
+
                 <!-- <p><input type="text" placeholder="Email" name="email"></p> -->
                 <label style="color: white;">Password</label>
-                <p><input type="password" placeholder="password" name="pwd" id="pwd"></p>
+
+                <p>
+                    <input type="password" placeholder="Password" name="pwd" id="pwd">
+                </p>
+
                 <label style="color: white;">User type</label>
-                <select class="select-menu" name="selectMenu" id="ltype">
-                    <option value="default">Login Type...!</option>
-                    <option value="Admin">Admin</option>
-                    <option value="SubIncharge">Subincharge</option>
-                    <option value="Supplier">Supplier</option>
-                    <!-- <option value="Ware Housing">Ware Housing</option>	 -->
-                    <!-- <option value="Ware Housing">Ware Housi/ng</option>	 -->
-                </select>
+
+                <p calss="r">
+                    <select class="select-menu" name="selectMenu" id="ltype" style="width:638px;height:50px;">
+                        <option value="default">Login Type...!</option>
+                        <option value="Admin">Admin</option>
+                        <option value="SubIncharge">Subincharge</option>
+                        <option value="Supplier">Supplier</option>
+                        <!-- <option value="Ware Housing">Ware Housing</option>	 -->
+                        <!-- <option value="Ware Housing">Ware Housi/ng</option>	 -->
+                    </select>
+                </p>
                 <!-- <p><textarea name="message" placeholder="Message"></textarea></p> -->
-                <button type="submit" class="thm-btn register" id="btnSubmit">Login <i class="fa fa-arrow-right"></i></button>
+                <button type="submit" class="thm-btn register" id="btnLogin">Login <i class="fa fa-arrow-right"></i></button>
+                <span id="msg"></span>
             </form>
+
+
         </div>
-        @*<script type="text/javascript">*@
-        //function f1() {
-        //    var data = {
-        //        userid: $('[name="name"]').val(),
-        //        password: $('[name="pwd"]').val(),
-        //        logintype: $('[name="selectMenu"]').val()
-        //    };
-        //    $.ajax({
-        //        type: "POST",
-        //        url: "http://localhost:4514/Home/Login",
-        //        content: "application/json",
-        //        dataType: "json",
-        //        data: JSON.stringify(data),
-        //        success: function (data) {
-        //            console.log('success');
-        //        },
-        //        error: function (data) {
-        //            console.log('failed');
-        //        }
-        //    });
-        //}
-
-        @*</script>*@
-        <script>
-            $(document).ready(function () {
-                $("#btnSubmit").click(function (e) {
-                    //Serialize the form datas.
-                    var valdata = $("#formLogin").serialize();
-                    //to get alert popup
-                    alert(valdata);
-                    $.ajax({
-                        url: "/Home/Login",
-                        type: "POST",
-                        dataType: 'json',
-                        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-                        data: valdata
-                    });
+        <script language="javascript">
+            function ValidateUser() {
+                $("#msg").hide();
+                var userid = $("#userid").attr('value');
+                var password = $("#password").attr('value');
+                var logintype = $("#ltype").attr('value');
+                var url = "/Home/ValidateUser/";
+                $("#btnLogin").val('Plesae wait..');
+                $.ajax({
+                    url: url,
+                    data: { userId: userid, pass: password, ltype=logintype },
+                    dataType: JSON,
+                    cache: false,
+                    type: "POST",
+                    success: function (data) {
+                        if (data == true) {
+                            window.location.href = '@Url.Action("Main", "Admin")';
+                        }
+                        $("#txtuserid").attr({ 'value': '' });
+                        $("#txtpassword").attr({ 'value': '' });
+                    },
+                    error: function (data) {
+                         
+                        if (data == "false") {
+                            $("#msg").html("login failed");
+                            $("#msg").show();
+                        }
+                        else {
+                            $("#msg").hide();
+                        }
+                         
+                    }
                 });
-            });
+                $("#btnlogin").val('Login');
+            }
         </script>
-
     </div>
 </div>
 

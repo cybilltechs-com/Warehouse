@@ -12,6 +12,9 @@ namespace WarehouseManagementSystem.DataAccessLayer
 {
     public class DataAccessCredentials
     {
+    }
+    public class AdminProfile
+    {
         public List<Admin> LoginCheck(string uid, string email, string password, string logintype)
         {
             DataSet ds;
@@ -22,8 +25,8 @@ namespace WarehouseManagementSystem.DataAccessLayer
             SqlCommand cmd;
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Warehouse"].ConnectionString))
             {
-                    if (logintype == "Admin")
-                    {
+                if (logintype == "Admin")
+                {
                     try
                     {
                         cmd = new SqlCommand("CheckLogin", conn);
@@ -72,7 +75,7 @@ namespace WarehouseManagementSystem.DataAccessLayer
                         }
                         return objAdmin;
                     }
-                   
+
                     catch
                     {
                         return objAdmin;
@@ -82,8 +85,8 @@ namespace WarehouseManagementSystem.DataAccessLayer
                         conn.Close();
                     }
 
-                    }
-              
+                }
+
             }
             return objAdmin;
         }

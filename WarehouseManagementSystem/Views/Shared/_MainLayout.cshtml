@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- styles -->
     <!-- helpers -->
-    <link rel="stylesheet" href="/Content/plugins/bootstrap/css/bootstrap.min.css">
+    @*<link rel="stylesheet" href="/Content/plugins/bootstrap/css/bootstrap.min.css">*@
+    
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <!-- fontawesome css -->
     <link rel="stylesheet" href="/Content/plugins/font-awesome/css/font-awesome.min.css">
     <!-- strock gap icons -->
@@ -92,31 +94,31 @@
                         <ul class="nav">
                             <li class="has-submenu">
                                 <a href=@Url.Action("/Index")>Home</a>
-                                
+
                             </li>
                             <li class="has-submenu">
                                 <a href=@Url.Action("/About")>about us</a>
-                                 <ul class="submenu">
+                                <ul class="submenu">
                                     <li><a href=@Url.Action("/Team")>Our Team</a></li>
                                     <li><a href=@Url.Action("/Company_history")>Company History</a></li>
                                     <li><a href=@Url.Action("/Clients")>Our Clients</a></li>
                                     <li><a href=@Url.Action("/Testimonials")>Testimonials</a></li>
                                     <li><a href=@Url.Action("/Career")>Career</a></li>
-                                </ul> 
+                                </ul>
                             </li>
                             <li class="has-submenu">
                                 <a href=@Url.Action("/Services")>Services</a>
-                                 <ul class="submenu">
+                                <ul class="submenu">
                                     <li><a href=@Url.Action("/Single_service")>Service Details</a></li>
                                     <li><a href=@Url.Action("/Pricing")>Our Pricing</a></li>
-                                </ul> 
+                                </ul>
                             </li>
                             <li class="has-submenu">
                                 <a href=@Url.Action("/Fleet_gallery_1")>Gallery</a>
-                                 <ul class="submenu">
+                                <ul class="submenu">
                                     <li><a href=@Url.Action("/Fleet_gallery_1")>fleet gallery one</a></li>
                                     <li><a href=@Url.Action("/Fleet_gallery_2")>fleet gallery two</a></li>
-                                </ul> 
+                                </ul>
                             </li>
                             <!-- 	<li class="has-submenu">
                                     <a href="#">Pages</a>
@@ -128,12 +130,12 @@
                                     </ul>
                                 </li> -->
                             <li class="has-submenu">
-                                <a href="blog-left.html">blog</a>
-                                 <ul class="submenu">
+                                <a href=@Url.Action("/Blog_left")>blog</a>
+                                <ul class="submenu">
                                     <li><a href=@Url.Action("/Blog_left")>Blog Left Bar</a></li>
                                     @*<li><a href="blog-right.html">Blog Right Bar</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>*@
-                                </ul> 
+                                        <li><a href="blog-details.html">Blog Details</a></li>*@
+                                </ul>
                             </li>
                             <li><a href=@Url.Action("/Contact")>contact us</a></li>
                             <li>
@@ -152,7 +154,7 @@
         </div>
     </nav>
     <!-- End mainmenu -->
-   
+
     <div>
         @RenderBody()
     </div>
@@ -269,9 +271,13 @@
             </div>
         </div>
     </section>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
     <!-- jQuery js -->
-    <script src="/Content/plugins/jquery/jquery-1.11.3.min.js"></script>
+    @*<script src="/Content/plugins/jquery/jquery-1.11.3.min.js"></script>*@
     <!-- bootstrap js -->
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
     <script src="/Content/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- jQuery ui js -->
     <script src="/Content/plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
@@ -301,6 +307,7 @@
     <script src="/Content/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
     <script src="/Content/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
     <script src="/Content/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
     <!-- fancy box -->
     <script src="/Content/plugins/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
     <!-- type script -->

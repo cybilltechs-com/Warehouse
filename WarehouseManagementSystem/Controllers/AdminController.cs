@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WarehouseManagementSystem.Models;
 
 namespace WarehouseManagementSystem.Controllers
 {
@@ -13,10 +15,42 @@ namespace WarehouseManagementSystem.Controllers
         {
             return View();
         }
-     
-        public ActionResult View_Profile()
+       [HttpPost]
+        public ActionResult Add_Profile(Admin admindetails,FormCollection formCollection)
         {
-            return View();
+            var ProfileImage = Request.Files;
+            string imgname = string.Empty;
+            string ImageName = string.Empty;
+
+
+            //Following code will check that image is there 
+            //If it will Upload or else it will use Default Image
+
+            if (System.Web.HttpContext.Current.Request.Files.AllKeys.Any())
+            {
+                var logo = System.Web.HttpContext.Current.Request.Files["file"];
+                if (logo.ContentLength > 0)
+                {
+                    var profileName = Path.GetFileName(logo.FileName);
+                    var ext = Path.GetExtension(logo.FileName);
+
+                    ImageName = profileName;
+                    var comPath = Server.MapPath("/images/") + ImageName;
+
+                    logo.SaveAs(comPath);
+                    admindetails.ProfileImage = comPath;
+                }
+
+
+            }
+            else
+            {
+                admindetails.ProfileImage = Server.MapPath("/images/") + "profile.jpg";
+            }
+
+            int response = 1;
+            return Json(response, JsonRequestBehavior.AllowGet);
+
         }
         public ActionResult Add_Item()
         {

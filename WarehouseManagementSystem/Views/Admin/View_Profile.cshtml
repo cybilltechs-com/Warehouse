@@ -18,18 +18,114 @@
     <!-- Input switch -->
     <link rel="stylesheet" type="text/css" href="/Content/assets/widgets/input-switch/inputswitch.css">
     <script type="text/javascript" src="/Content/assets/widgets/input-switch/inputswitch.js"></script>
-    <script type="text/javascript">/* Input switch */
 
-    $(function() { "use strict";
-        $('.input-switch').bootstrapSwitch();
-    });</script>
+    <script type="text/javascript">
+        /* Input switch */
+
+        $(function () {
+            "use strict";
+            $('.input-switch').bootstrapSwitch();
+        });</script>
     <!-- Textarea -->
     <script type="text/javascript" src="/Content/assets/widgets/textarea/textarea.js"></script>
-    <script type="text/javascript">/* Textarea autoresize */
+    <script type="text/javascript">
+        /* Textarea autoresize */
 
-    $(function() { "use strict";
-        $('.textarea-autosize').autosize();
-    });</script>
+        $(function () {
+            "use strict";
+            $('.textarea-autosize').autosize();
+        });</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var country_arr = new Array("Select Country", "AUSTRALIA", "INDIA", "NEW ZEALAND", "USA", "UAE", "MAURITIUS");
+
+            $.each(country_arr, function (i, item) {
+                $('#country').append($('<option>', {
+                    value: i,
+                    text: item,
+                }, '</option>'));
+            });
+
+            // States
+            var s_a = new Array();
+            s_a[0] = "Select State";
+            s_a[1] = "Select State|QUEENSLAND|VICTORIA";
+            s_a[2] = "Select State|ANDHRAPRADESH|KARNATAKA|TAMILNADU|DELHI|GOA|W-BENGAL|GUJARAT|MADHYAPRADESH|MAHARASHTRA|RAJASTHAN";
+            s_a[3] = "Select State|AUCKLAND";
+            s_a[4] = "Select State|NEWJERSEY|ILLINOIS";
+            s_a[5] = "Select State|DUBAI";
+            s_a[6] = "Select State|MAURITIUS";
+
+            // Cities
+            var c_a = new Array();
+            c_a['QUEENSLAND'] = "BRISBANE";
+            c_a['VICTORIA'] = "MELBOURNE";
+            c_a['ANDHRAPRADESH'] = "HYDERABAD";
+            c_a['KARNATAKA'] = "BANGLORE";
+            c_a['TAMILNADU'] = "CHENNAI";
+            c_a['DELHI'] = "DELHI";
+            c_a['GOA'] = "GOA";
+            c_a['W-BENGAL'] = "KOLKATA";
+            c_a['GUJARAT'] = "AHMEDABAD1|AHMEDABAD2|AHMEDABAD3|BARODA|BHAVNAGAR|MEHSANA|RAJKOT|SURAT|UNA";
+            c_a['MADHYAPRADESH'] = "INDORE";
+            c_a['MAHARASHTRA'] = "MUMBAI|PUNE";
+            c_a['RAJASTHAN'] = "ABU";
+            c_a['AUCKLAND'] = "AUCKLAND";
+            c_a['NEWJERSEY'] = "EDISON";
+            c_a['ILLINOIS'] = "CHICAGO";
+            c_a['MAURITIUS'] = "MAURITIUS";
+            c_a['DUBAI'] = "DUBAI";
+
+
+            $('#country').change(function () {
+                var c = $(this).val();
+                var state_arr = s_a[c].split("|");
+                $('#state').empty();
+                $('#city').empty();
+                if (c == 0) {
+                    $('#state').append($('<option>', {
+                        value: '0',
+                        text: 'Select State',
+                    }, '</option>'));
+                } else {
+                    $.each(state_arr, function (i, item_state) {
+                        $('#state').append($('<option>', {
+                            value: item_state,
+                            text: item_state,
+                        }, '</option>'));
+                    });
+                }
+                $('#city').append($('<option>', {
+                    value: '0',
+                    text: 'Select City',
+                }, '</option>'));
+            });
+
+            $('#state').change(function () {
+                var s = $(this).val();
+                if (s == 'Select State') {
+                    $('#city').empty();
+                    $('#city').append($('<option>', {
+                        value: '0',
+                        text: 'Select City',
+                    }, '</option>'));
+                }
+                var city_arr = c_a[s].split("|");
+                $('#city').empty();
+
+                $.each(city_arr, function (j, item_city) {
+                    $('#city').append($('<option>', {
+                        value: item_city,
+                        text: item_city,
+                    }, '</option>'));
+                });
+
+
+            });
+        });
+    </script>
     <div id="theme-options" class="admin-options">
         <a href="javascript:void(0);" class="btn btn-primary theme-switcher tooltip-button" data-placement="left" title="Color schemes and layout options">
             <i class="glyph-icon icon-linecons-cog icon-spin"></i>
@@ -785,35 +881,35 @@
                     </div>
                     <div class="tab-pane pad0A fade active in" id="tab-example-4">
                         <div class="content-box">
-                            <form class="form-horizontal pad15L pad15R bordered-row">
+                            <form id="admin_profile" class="form-horizontal pad15L pad15R bordered-row" enctype="multipart/form-data" method="post">
                                 <div class="form-group remove-border">
                                     <label class="col-sm-3 control-label">Full Name:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="" placeholder="First name...">
+                                        <input type="text" class="form-control" id="fullname" placeholder="Full Name...">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Email Address:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="" placeholder="Email address...">
+                                        <input type="text" class="form-control" id="email" placeholder="Email address...">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">User Id:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="" placeholder="User Id...">
+                                        <input type="text" class="form-control" id="userid" placeholder="User Id...">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">Password:</label>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control" id="" placeholder="Password...">
-                                    </div>
-                                </div>
+                                @*<div class="form-group">
+                                        <label class="col-sm-3 control-label">Password:</label>
+                                        <div class="col-sm-6">
+                                            <input type="password" class="form-control" id="" placeholder="Password...">
+                                        </div>
+                                    </div>*@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Profile Image</label>
                                     <div class="col-sm-6">
-                                        <input type="file" placeholder="upload image" required class="input-group">
+                                        <input type="file" id="adminimage" placeholder="upload image" required class="input-group">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -821,13 +917,13 @@
                                     <div class="col-sm-6">
                                         <!-- <textarea name="" rows="3" class="form-control textarea-autosize"></textarea> -->
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="female" checked>
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="gender" value="female" checked>
                                             <label class="form-check-label" for="exampleRadios1">
                                                 Female
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="male">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="gender" value="male">
                                             <label class="form-check-label" for="exampleRadios2">
                                                 Male
                                             </label>
@@ -837,25 +933,40 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Phone Number:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="" placeholder="Phone Number...">
+                                        <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number...">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Date Of Birth:</label>
                                     <div class="col-sm-6">
-                                        <input type="date" class="form-control" id="" placeholder="Date Of Birth...">
+                                        <input type="date" class="form-control" id="dateofbirth" placeholder="Date Of Birth...">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Address Line1:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="" placeholder="Address Line1...">
+                                        <input type="text" class="form-control" id="addressline1" placeholder="Address Line1...">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Address Line2:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="" placeholder="Address Line2...">
+                                        <input type="text" class="form-control" id="addressline2" placeholder="Address Line2...">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Country:</label>
+                                    <div class="col-sm-6">
+                                        <!-- <input type="text" class="form-control" id="" placeholder="Country..."> -->
+                                        <select name="Countries" class="form-control" id="country"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">State:</label>
+                                    <div class="col-sm-6">
+                                        <!-- <input type="text" class="form-control" id="" placeholder="State..."> -->
+                                        <select name="states" class="form-control" id="state"></select>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -863,76 +974,74 @@
                                     <div class="col-sm-6">
                                         <!-- <input type="text" class="form-control" id="" placeholder="District..."> -->
 
-                                        <select name="Districts" class="form-control">
-                                            <option value="choose">choose your district...!</option>
-                                            <option value="Adilabad">Adilabad</option>
-                                            <option value="Bhadradri Kothagudem">Bhadradri Kothagudem</option>
-                                            <option value="Jangaon">Jangaon</option>
-                                            <option value="	Jayashankar Bhupalpally">Jayashankar Bhupalpally</option>
-                                            <option value="Jogulamba Gadwal">Jogulamba Gadwal</option>
-                                            <option value="Karimnagar">Karimnagar</option>
-                                            <option value="Mahabubabad">Mahabubabad</option>
-                                            <option value="Mancherial">Mancherial</option>
-                                            <option value="Medak">Medak</option>
-                                        </select>
+                                        <select name="Districts" class="form-control" id="city"></select>
 
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">State:</label>
-                                    <div class="col-sm-6">
-                                        <!-- <input type="text" class="form-control" id="" placeholder="State..."> -->
-                                        <select name="states" class="form-control">
-                                            <option value="choose">choose your State...!</option>
-                                            <option value="Telangana">Telangana</option>
-                                            <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                            <option value="Tamil Nadu">Tamil Nadu</option>
-                                            <option value="Kerala">Kerala</option>
-                                            <option value="Punjab">Punjab</option>
-                                            <option value="Gujarat">Gujarat</option>
-                                            <option value="bihar">bihar</option>
-                                            <option value="haryana">haryana</option>
-                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">Country:</label>
-                                    <div class="col-sm-6">
-                                        <!-- <input type="text" class="form-control" id="" placeholder="Country..."> -->
-                                        <select name="Countries" class="form-control">
-                                            <option value="choose">choose your country...!</option>
-                                            <option value="	India">India</option>
-                                            <option value="	China">China</option>
-                                            <option value="Russia">Russia</option>
-                                            <option value="	Bangladesh">Bangladesh</option>
-                                            <option value="Japan">Japan</option>
-                                            <option value="Germany">Germany</option>
-                                            <option value="	Thailand">Thailand</option>
-                                            <option value="United Kingdom">United Kingdom</option>
-                                            <option value="France">France</option>
-                                        </select>
-                                    </div>
-                                </div>
+
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Zip Code:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="" placeholder="Zip Code...">
+                                        <input type="text" class="form-control" id="zipcode" placeholder="Zip Code...">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Pancard No:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="" placeholder="Pancard No...">
+                                        <input type="text" class="form-control" id="pancardno" placeholder="Pancard No...">
                                     </div>
                                 </div>
                             </form>
 
                             <div class="button-pane mrg20T">
-                                <button class="btn btn-info">Save</button>
+                                <button class="btn btn-info" id="addprofile">Save</button>
                                 <button class="btn btn-link font-gray-dark">Cancel</button>
                             </div>
                         </div>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+
+                                $('#addprofile').click(function () {
+
+                                    var formData = new FormData();
+                                    var files = $("#adminimage").get(0).files;
+
+
+                                    formData.append("file", files[0]);
+                                    formData.append("FirstName", $('#fullname').val());
+                                    formData.append("Email", $('#email').val());
+                                    formData.append("UserId", $('#userid').val());
+                                    formData.append("Gender", $("input[name='gender']:checked").val());
+                                    formData.append("PhoneNumber", $('#phonenumber').val());
+                                    formData.append("DateofBirth", $('#dateofbirth').val());
+                                    formData.append("AddressLine1", $('#addressline1').val());
+                                    formData.append("AddressLine2", $('#addressline2').val());
+                                    formData.append("Country", $('#country').val());
+                                    formData.append("State", $('#state').val());
+                                    formData.append("District", $("#city").val());
+                                    formData.append("AdminImage", files[0].name);
+                                    formData.append("ZipCode", $('#zipcode').val());
+                                    formData.append("PanCardNo", $('#pancardno').val());
+
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: "/Home/AddProfile",
+                                        data: formData,
+                                        cache: false,
+                                        contentType: false,
+                                        processData: false,
+                                        success: function (response) {
+                                            if (response == 1) {
+                                                alert("successfully Profile Updated");
+                                            }
+                                            else {
+                                                alert("Something Went Wrong..");
+                                            }
+                                        }
+                                    })
+                                })
+                            })
+                        </script>
                     </div>
                 </div>
             </div>
