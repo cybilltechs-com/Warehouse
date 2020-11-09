@@ -33,7 +33,8 @@ namespace WarehouseManagementSystem.Controllers
                 string logintype = form["ltype"];
                 List<Admin> user = new List<Admin>();
                 DataAccessCredentials dac = new DataAccessCredentials();
-                user = dac.LoginCheck(name, name, password, logintype);
+                AdminProfile ap = new AdminProfile();
+                user = ap.LoginCheck(name, name, password, logintype);
                 if (user != null)
                 {
                     return this.RedirectToAction("Main", "Admin");
@@ -41,6 +42,7 @@ namespace WarehouseManagementSystem.Controllers
             }
             return View();
 
+             
         }
 
         public ActionResult Pricing()
